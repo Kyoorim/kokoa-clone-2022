@@ -1,0 +1,34 @@
+.nav {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: #f9f9fa;
+  padding: 20px 50px;
+  box-sizing: border-box; /* width:100%을 했을 때 padding이 있어도 box크기를 늘리지 말고 그대로 유지해달라는 명령의 코드 */
+  border-top: 1px solid rgba(153, 151, 151, 0.3);
+}
+
+.nav__list {
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav__link {
+  color: #2e363e;
+  position: relative; /*notif를 message 박스 위에 놓기 위한 코드*/
+}
+
+.nav__notification {
+  position: absolute;
+  left: 15px;
+  bottom: 15px;
+}
+
+.nav__new {
+  background-color: tomato;
+  width: 5px;
+  height: 5px;
+  border-radius: 5px;
+  position: absolute;
+  left: 30px;
+  bottom: 28px;
