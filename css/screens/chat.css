@@ -1,0 +1,148 @@
+#chat-screen .status-bar {
+  background-color: #abc1d1;
+  z-index: 2;
+}
+
+#chat-screen {
+  background-color: #abc1d1;
+}
+
+#chat-screen .alt-header {
+  position: fixed;
+  width: 100%;
+  box-sizing: border-box;
+  top: 10px;
+  background-color: #abc1d1;
+  z-index: 1;
+}
+
+.main-chat {
+  margin-top: 130px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.chat-timestamp {
+  color: white;
+  background-color: #92a4ba;
+  padding: 8px 15px;
+  border-radius: 15px;
+  font-size: 13px;
+  margin-bottom: 25px;
+}
+
+.message-row {
+  width: 100%;
+  display: flex;
+}
+
+.message-row img {
+  width: 50px;
+  height: 50px;
+  border-radius: 40%;
+  margin-right: 15px;
+  margin-bottom: 25px;
+}
+
+.message__author {
+  opacity: 0.8;
+  font-size: 14px;
+  display: block; /*span이기때문에 margin을 주려면 block으로 바꿔야함 */
+  margin-bottom: 5px;
+}
+
+.message__info {
+  display: flex;
+  align-items: flex-end; /*박스 안에서 위치 설정해주는 방법*/
+}
+
+.message__bubble {
+  background-color: white;
+  font-size: 18px;
+  padding: 8px 13px;
+  border-radius: 13px;
+  border-top-left-radius: 0px; /*말풍선 만드는 방법*/
+  margin-right: 5px;
+}
+
+.message__time {
+  opacity: 0.8;
+  font-size: 14px;
+}
+
+.message-row--own {
+  justify-content: flex-end;
+}
+
+.message-row--own .message__bubble {
+  background-color: var(--yellow);
+  border-top-right-radius: 0px;
+  border-top-left-radius: 13px;
+  margin-right: 0px;
+  margin-left: 5px;
+}
+
+.message-row--own .message__info {
+  flex-direction: row-reverse;
+}
+
+.reply {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 25px;
+  box-sizing: border-box;
+  align-items: center;
+}
+
+.reply .reply__column:first-child {
+  width: 10%; /*column은 그 자체로 width를 가질 수 없기 때문에 사전에 이렇게 설정해줘야함 */
+}
+
+.reply .reply__column:last-child {
+  width: 90%;
+  position: relative;
+}
+
+.reply i {
+  opacity: 0.5;
+}
+.reply input {
+  padding: 10px;
+  width: 100%;
+  border: var(--main-border);
+  border-radius: 20px;
+}
+
+.reply__column:last-child>i, /* >는 direct의 뜻*/
+.reply__column:last-child button {
+  position: absolute;
+  right: -18px;
+  top: 3px;
+}
+
+.reply__column:last-child > i {
+  right: 20px;
+  top: 18px;
+}
+
+.reply__column button {
+  background-color: var(--yellow);
+  border: none;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+
+.reply__column button i {
+  opacity: 1;
+}
+
+.reply__column button:focus,
+.reply__column button:active {
+  outline: none;
+}
