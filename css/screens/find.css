@@ -118,6 +118,6 @@
 }
 
 .open-post__heart-count:hover i {
-  will-change: transform;
+  will-change: transform; /*브라우저에 변화를 미리 알려줘서 스무스하고 빠르게 변화가 일어날 수 있게 도움*/
   animation: heartBeat 1s linear infinite;
 }
